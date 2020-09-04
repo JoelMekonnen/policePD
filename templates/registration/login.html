@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% load myfilters %}
+<div class = "container-fluid p-0 signUpBg">
+       <div class = "row justify-content-center">
+        <div class = "col-lg-4 col-md-6 col-sm-12 col-xs-12 border shadow p-5" id = "loginCard">
+                  <h2 class = "h2 card-title Ethiopic">ወደ መረብ ይግቡ</h2>
+                  <form method = "POST">
+                     {% csrf_token %}
+                     <div class = "form-group">
+                        {%placeHolder form.username 'የተጠቃሚ ስም' 'form-control' %}
+                     </div>
+                     <div class = "form-group">
+                        {%placeHolder form.password 'የይለፍ ቃል' 'form-control' %}
+                     </div>
+                     <button type = "submit" class = "btn blue-gradient">ግቡ</button>
+                  </form>
+               </div>
+            </div>
+</div>
+{% endblock content %}

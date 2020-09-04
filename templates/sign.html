@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load myfilters %}
+{% block content %}
+<div class = "container-fluid signUpBg" style ="padding:0px;height:100%">
+      <div class = "row justify-content-center">
+          <div class = "col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class = "row justify-content-center">
+              <img src = "{% static 'images/office.png' %}" width="400px" height="300px" style="margin-top:4%;" />
+            </div>
+            <div class = "row justify-content-center white">
+              <h1 class = "EthiopicH1" style="padding-top:4%;"> ወደ መረጃ መረባችን እንኳን ደና መጣችሁ</h1>
+            </div>
+            <div class = "row justify-content-center white">
+              <p class = "EthiopicP" style="padding-left:3%;padding-right:3%;padding-bottom:4%;text-align:center;">በተቋሙ ውስጥ የርሶን ድርሻ በቴክኖሎጂ በመደገፍ ለመወጣት በመመዝገብ አጋርነቶን ያሳዩ።በተቋሙ ውስጥ የርሶን ድርሻ በቴክኖሎጂ በመደገፍ ለመወጣት በመመዝገብ አጋርነቶን ያሳዩ።በተቋሙ ውስጥ የርሶን ድርሻ በቴክኖሎጂ በመደገፍ ለመወጣት በመመዝገብ አጋርነቶን ያሳዩ።በተቋሙ ውስጥ የርሶን ድርሻ በቴክኖሎጂ በመደገፍ ለመወጣት በመመዝገብ አጋርነቶን ያሳዩ።በተቋሙ ውስጥ የርሶን ድርሻ በቴክኖሎጂ በመደገፍ ለመወጣት በመመዝገብ አጋርነቶን ያሳዩ።</p>
+            </div>
+          </div>
+          <div class = "col-lg-5 col-md-12 col-sm-12 col-xs-12" style ="margin-top:5%;margin-left:3%;">
+            <form class = "form" method = "POST" style="padding:5%;">
+                {% csrf_token %}
+                <div class = "form-group">
+                  {%placeHolder form.username 'የተጠቃሚ ስም' 'form-control signup' %}
+               </div>
+               <div class = "form-group">
+                {%placeHolder form.email 'ኢሜል' 'form-control signup' %}
+              </div>
+              <div class = "form-group">
+                {%placeHolder form.password1 'የይለፍ ቃል' 'form-control signup' %}
+              </div>
+              <div class = "form-group">
+                {%placeHolder form.password2 'የይለፍ ቃሎን ያረጋግጡ' 'form-control signup' %}
+             </div>
+             <div class = "form-group">
+              {%placeHolder form.first_name 'የርሶ ስም' 'form-control signup' %}
+             </div>
+             <div class = "form-group">
+              {%placeHolder form.last_name 'የአባት ስም' 'form-control signup' %}
+             </div>
+             <div class = "form-group">
+               <label>ጾታ</label>
+              {%placeHolder form.gender 'ጾታ' 'form-control signup' %}
+             </div>
+             <div class = "form-group">
+               <label>ደረጃ</label>
+               {%placeHolder form.rank 'ደረጃ' 'form-control signup' %}
+             </div>
+              <button type = "submit" class = "btn gray">ተመዝገብ</button>
+            </form>
+          </div>
+</div>
+    
+{% endblock content %}
+    

@@ -1,0 +1,53 @@
+ <div class = "row" style="padding:5%;background-color:#dee2e6;">
+            <div class = "row mr-auto" style="width:100%;">
+                 <h2 style="font-family:'Montserrat'; font-size:24px; font-weight:400;color:#ff3547;margin-bottom:24px;">User Account Control</h2>
+            </div>
+            <div class = "col-lg-3">
+                <div class = "card control-card"> 
+                    <div class = "card-body">
+                        <div class = "row justify-content-center">
+                            <i class="material-icons" style="font-size:36px;">add</i>
+                        </div>
+                        <div class = "row justify-content-center">
+                            <h5 class="desc-h">Add New User</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-lg-3">
+                <div class = "card control-card"> 
+                    <div class = "card-body">
+                        <div class = "row justify-content-center">
+                            <i class="material-icons" style="font-size:36px;">create</i>
+                        </div>
+                        <div class = "row justify-content-center">
+                            <h5 class="desc-h">Edit User</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-lg-3">
+                <div class = "card control-card"> 
+                    <div class = "card-body">
+                        <div class = "row justify-content-center">
+                            <i class="material-icons" style="font-size:36px;">unarchive</i>
+                        </div>
+                        <div class = "row justify-content-center">
+                            <h5 class="desc-h">Update user</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-lg-3">
+                <div class = "card control-card"> 
+                    <div class = "card-body">
+                        <div class = "row justify-content-center">
+                            <i class="material-icons" style="font-size:36px;">delete_sweep</i>
+                        </div>
+                        <div class = "row justify-content-center">
+                            <h5 class="desc-h">delete user</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

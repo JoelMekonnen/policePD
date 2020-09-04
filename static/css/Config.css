@@ -1,0 +1,95 @@
+body {
+    overflow-x:hidden;
+}
+#menuPlace li {
+    margin-top: 25px;
+    font-family: "Montserrat";
+    font-size: 15px;
+    color: white;
+    margin-left: 25px;
+}
+#menuPlace > li > a > i {
+    color: white;
+    margin-right: 25px;
+    font-size:25px;
+}
+#menuPlace > li > a:hover i{
+    color: black;
+}
+#menuPlace > li > a:hover p{
+    color: black;
+}
+.bigHeader {
+    font-family: 'Montserrat';
+    font-size: 50px;
+    margin-top: 10%;
+}
+.iconClass i {
+    font-size: 32px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 10px;
+    border-color: #b30000;
+    color: #4c4cab;
+}
+.iconClass i:hover {
+    color:white;
+    background-image:linear-gradient(90deg,#00bcd4,#9c27b0);
+    border-color:white;
+}
+.EthiopicH1 {
+    font-family: 'Ethiopic Zelan';
+    font-size: 50px;
+}
+.EthiopicP {
+    font-family: 'Ethiopic Zelan';
+    font-size: 20px;
+}
+.Ethiopic {
+    font-family: 'Ethiopic Zelan';
+}
+.imageClass {
+    /* background-image:url("../images/lines.png"); */
+    background-position: center;
+    background-size: cover;
+    height: auto;
+}
+.signUpBg{
+     background-image:url("../images/BG.jpg"); 
+     background-position: center;
+     background-size: cover;
+     height: 100vh;
+
+}
+#loginCard {
+   margin-top:15%;
+}
+.menuFont {
+    font-size:24px;
+    font-family: 'source sans pro';
+    font-weight: 400;
+    text-align:center;
+}
+.rowHover:hover {
+    background-image:linear-gradient(90deg, #00bcd4, #9c27b0);
+    color:white;
+}
+.adminRow {
+    
+}
+
+.desc-h {
+    font-family: 'montserrat';
+}
+.control-card:hover {
+    background-image:linear-gradient(90deg, #00bcd4, #9c27b0);
+    color:white;
+    
+}
+.bodyRow {
+    background-image:url("../images/car1.jpg"); 
+     background-position: center;
+     background-size: cover;
+
+}
