@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.views.generic import DetailView, ListView, CreateView, UpdateView
+from django.views.generic import DetailView, ListView, CreateView, UpdateView, DeleteView
 from django.views import View
 from django.urls import reverse_lazy
 from .forms import PoliceCreateForm, PoliceChangeForm
@@ -38,8 +38,6 @@ class PoliceCreateView(CreateView):
     success_url = reverse_lazy('home')
     template_name = 'sign.html'
 
-
-
 class CaseCreateView(CreateView):
     model = CaseInfo
     template_name = 'staff/CaseCreate.html'
@@ -48,12 +46,23 @@ class CaseCreateView(CreateView):
 
 class ShowCases(ListView):
     model = CaseInfo
-    template_name = "staff/ShowCase.html"
+    paginate_by = 2
+    context_object_name = 'Cases'
+    template_name = "staff/ShowCases.html"
+    queryset = CaseInfo.objects.all()
     
 
 class CaseUpdateView(UpdateView):
     model = CaseInfo
     template_name = 'staff/CaseUpdate.html'
     fields = ['CaseName', 'CaseDescription']
+    context_object_name = "Cases"
+    success_url = reverse_lazy('home')
+
+class CaseDeleteView(DeleteView):
+    model = CaseInfo
+    template_name = 'staff/CaseDelete.html'
+    context_object_name = 'Cases'
+    success_url = reverse_lazy('home')
     
 

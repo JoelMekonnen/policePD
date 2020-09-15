@@ -1,0 +1,27 @@
+{% extends 'admin.html' %}
+{% block content %}
+{% load static %}
+{% load myfilters %}
+      <div class = "container-fluid">
+          <div class = "row justify-content-center">
+            <div class = "row justify-content-center" style="width:100%; margin-top:15%;">
+                <h2 style="font-family:'Montserrat'; font-size:24px; font-weight:400;color:white;margin-top:24px;">Delete Cases</h2>
+             </div>
+            <div class = "col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <form class = "form" method = "POST" style="padding:5%;">
+                    {% csrf_token %}
+                    <div class = "card-body">
+                        <div class = "row justify-content-center">
+                            <h5 style="font-size:24px;color:black;">{{Cases.CaseName}}</h5>
+                        </div>
+                        <div class = "row justify-content-center">
+                            <h5 class="desc-h" style="text-align:center;">{{Cases.CaseDescription}}</h5>
+                        </div>
+                    </div>
+                    {{form.as_p}}
+                  <button type = "submit" class = "btn btn-danger">Delete Case</button>
+                </form>
+            </div>
+          </div>
+      </div>
+{% endblock content %}

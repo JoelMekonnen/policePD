@@ -88,8 +88,38 @@ body {
     
 }
 .bodyRow {
-    background-image:url("../images/car1.jpg"); 
+     background-image:url("../images/BG.jpg"); 
      background-position: center;
      background-size: cover;
 
+}
+.infoRow {
+    height:auto;
+}
+.infoTab {
+    background-color: #efefef;
+    margin-left: 50px;
+    padding:5%;
+    color:black;
+}
+.myPaginate {
+    margin-left:40%;
+    margin-top:10%;
+}
+.myPaginate ul li  {
+    margin-left:20px;
+}
+.myPaginate ul li a {
+    font-size:20px !important;
+    border-style:solid !important;
+    transition: font-size ease-in-out;
+}
+.page-link:hover {
+    color:black !important;
+    font-size:30px;
+    border:none !important;
+    background-color:#efefef;
+}
+.page-item.active .page-link{
+    background-color:#ff3547 !important;
 }

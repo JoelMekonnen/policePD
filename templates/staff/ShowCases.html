@@ -2,5 +2,59 @@
 {% block content %}
 {% load static %}
 {% load myfilters %}
-
+   <div class = "container-fluid">
+        <div class = "row justify-content-center infoRow" style="margin-top:10%;padding:3%;">
+           {% for case in Cases %} 
+            <div class = "col-lg-5 infoTab">
+                <div class = "card" style="background-color: transparent !important; color:black;box-shadow: none; border:none;"> 
+                    <div class = "card-body">
+                        <div class = "row justify-content-center">
+                            <h5 style="font-size:24px;color:black;">{{case.CaseName}}</h5>
+                        </div>
+                        <div class = "row justify-content-center">
+                            <h5 class="desc-h" style="text-align:center;">{{case.CaseDescription}}</h5>
+                        </div>
+                        <div class = "row justify-content-center">
+                          <div class ="col-lg-6">
+                              <a class = "btn btn-danger" href="{% url 'caseDelete' case.pk %}">Delete Case</a>
+                          </div>
+                          <div class ="col-lg-6">
+                            <a class = "btn btn-primary" href="{% url 'caseUpdate' case.pk %}">update Case</a>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </div> 
+            {% endfor %}
+        </div>
+        <nav class ="myPaginate">
+            {% if is_paginated %}
+            <ul class="pagination ">
+              {% if page_obj.has_previous %}
+              <li class="page-item" style="color:white;">
+                <a class="page-link material-icons" style="color:white;" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">chevron_left</a>
+              </li>
+              {% else %}
+              <li class="page-item disabled"><span class="page-link material-icons" style="color:white;">chevron_left</span></li>
+              {% endif %}
+              {% for i in paginator.page_range %}
+                {% if page_obj.number == i %}
+                <li class="page-item active">
+                    <a class="page-link" href="#">{{i}} <span class="sr-only">(current)</span></a>
+                  </li>
+                {% else %}
+                  <li class = "page-item"><a style="color:white;" href="?page={{ i }}" class ="page-link">{{ i }}</a></li>
+                {% endif %}
+              {% endfor %}
+              {% if page_obj.has_next %}
+              <li class="page-item">
+                <a class="page-link material-icons" style="color:white;" href="?page={{ page_obj.next_page_number }}">chevron_right</a>
+              </li>
+              {% else %}
+                <li class="page-item disabled"><span class="page-link material-icons" style="color:white;">chevron_right</span></li>
+              {% endif %}
+            </ul>
+            {% endif %}
+          </nav>
+   </div>
 {% endblock content %}
