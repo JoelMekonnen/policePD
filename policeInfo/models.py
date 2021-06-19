@@ -17,7 +17,7 @@ class CaseInfo(models.Model):
         return self.CaseName
 
 class CaseAssign(models.Model):
-    AssignedTo = models.OneToOneField(PoliceInfo, on_delete=models.CASCADE, related_name='PoliceID')
+    AssignedTo = models.ForeignKey(PoliceInfo, on_delete=models.CASCADE, related_name='PoliceID')
     AssignedCase = models.OneToOneField(CaseInfo, on_delete=models.CASCADE, related_name='CaseID')
     CaseAccepted = models.BooleanField(default=False)
     CaseCompleted = models.BooleanField(default=False)

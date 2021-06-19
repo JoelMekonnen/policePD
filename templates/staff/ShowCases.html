@@ -20,12 +20,22 @@
                           </div>
                           <div class ="col-lg-6">
                             <a class = "btn btn-primary" href="{% url 'caseUpdate' case.pk %}">update Case</a>
+                          </div>
+                        </div>
+                        <hr style="border-color:black;">
+                        <div class="row justify-content-center">
+                          {% if case.CaseID.CaseCompleted %}
+                             <div class ="row" style="width:100%;"> <i class="material-icons" style="color:#4285f4;font-size:30px;">dashboard</i><p style="color:black;font-size:22px;font-family:'Source sans pro';">Status: <span style="color:#4285f4;">not completed</span></p></div>
+                          {% else %}
+                             <div class ="row" style="width:100%;"> <i class="material-icons" style="color:#4285f4;font-size:30px;">dashboard</i><p style="color:black;font-size:22px;font-family:'Source sans pro';">Status: <span style="color:red;">not completed</span></p></div>
+                          {% endif %}
+                             <div class ="row" style="width:100%;"> <i class="material-icons" style="color:#4285f4;font-size:30px;">account_circle</i><p style="color:black;font-size:22px;font-family:'Source sans pro';">Assigned To: <span style="color:green;">{{case.CaseID.AssignedTo.username}}</span></p></div>    
                         </div>
                        </div>
                     </div>
                 </div>
-            </div> 
             {% endfor %}
+          </div> 
         </div>
         <nav class ="myPaginate">
             {% if is_paginated %}
